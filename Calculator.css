@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: -moz-repeating-linear-gradient();
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.calculator {
+    background-color: blueviolet;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(red, green, blue, alpha);
+    width: 300px;
+}
+/* Calculator display */
+input {
+    width: 100%;
+    font-size: 2.2 rem;
+    padding: 15px;
+    border: none;
+    background-color: bisque;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Buttons container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+/* Button styling */
+button {
+    font-size: 1.6rem;
+    padding: 15px;
+    background-color: blue;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s background-color 0.3s;
+    color: blanchedalmond;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+button:active {
+    transform: scale(0.95); /* Scale button on click */
+}
+/* Operators */
+button:nth-child(-n+4) {
+    background-color: goldenrod; /* Yellow for operators */
+    color: #333;
+    font-weight: bold;
+}
+button:nth-child(-n+4):hover {
+    background-color: yellow; /* Darker yellow on hover */
+}
+/* Clear button */
+.clear {
+    background-color: orangered; /* Bright red for clear */
+    color: white;
+    font-weight: bold;
+}
+
+.clear:hover {
+    background-color: red; /* Darker red on hover */
+}
+/* Equal button */
+.equal {
+    background-color: green; /* Green for equal button */
+    color: burlywood;
+    font-weight: bold;
+    grid-column: span 2; /* Make "=" button span two columns */
+}
+.equal:hover {
+    background-color: greenyellow;
+}
+/* Number buttons */
+button:not(.clear):not(.equal):not(:nth-child(-n+4)) {
+    background-color: #80bef0; /* Light blue for numbers */
+    color: black;
+}
+
+button:not(.clear):not(.equal):not(:nth-child(-n+4)):hover {
+    background-color: #90caf9; /* Darker blue on hover */
+}
